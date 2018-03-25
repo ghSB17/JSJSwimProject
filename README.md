@@ -1,2 +1,2 @@
-# Project1
-Swim Website
+# JSJSwim
+Project1
