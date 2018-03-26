@@ -97,7 +97,7 @@
 <!-- end second header -->
         <div class="row">
           <div class="grid-container">
-            <form data-abide novalidate>
+            <form data-abide novalidate action="https://formspree.io/jsjswim@gmail.com" method="POST">
               <div data-abide-error class="alert callout" style="display: none;">
                 <p>
                   <i class="fi-alert"></i> There are some errors in your form.</p>
@@ -106,21 +106,21 @@
                 <div class="large-4 medium-4 cell">
                   <!-- First and last names -->
                   <label>Parent / Guardian First Name</label>
-                  <input type="text" placeholder="Parent's First Name" aria-describedby="ParentName" required pattern="text">
+                  <input type="text" placeholder="Parent's First Name" aria-describedby="ParentName" required pattern="text" name="ParentFirstName"/>
                   <span class="form-error">
                     Yo, you had better fill this out, it's required.
                   </span>
                 </div>
                 <div class="large-4 medium-4 cell">
                   <label>Parent / Guardian Last Name</label>
-                  <input type="text" placeholder="Parent's Last Name" />
+                  <input type="text" placeholder="Parent's Last Name" name="ParentLastName"/>
                 </div>
                 <!-- email with verification -->
                 <div class="large-4 medium-4 cell">
                   <div class="grid-x">
                     <label>Parent / Guardian Email Address</label>
                     <div class="input-group">
-                      <input type="email" placeholder="name@domain.com" aria-describedby="emailaddress" required pattern="email">
+                      <input type="email" placeholder="name@domain.com" aria-describedby="emailaddress" required pattern="email" name="ParentEmail">
                       <span class="form-error">
                         Enter a valid email address.
                       </span>
@@ -132,7 +132,7 @@
               <div class="grid-x grid-padding-x">
                 <div class="large-12 cell">
                   <label>Subject</label>
-                  <select>
+                  <select name="ClassType">
                     <option value="parent">Parent/Child</option>
                     <option value="preschool">Pre-School</option>
                     <option value="school">School Age</option>
@@ -146,7 +146,7 @@
               <div class="grid-x grid-padding-x">
                 <div class="large-12 cell">
                   <label>Your Message</label>
-                  <textarea placeholder="Type your message here" rows="4"></textarea>
+                  <textarea placeholder="Type your message here" rows="4" name="message"></textarea>
                 </div>
               </div>
               <br>
@@ -159,15 +159,15 @@
               <div class="grid-x grid-padding-x">
                 <div class="large-4 medium-4 cell">
                   <label>Student's First Name</label>
-                  <input type="text" placeholder="Student's First Name" />
+                  <input type="text" placeholder="Student's First Name" name="StudentFirstName"/>
                 </div>
                 <div class="large-4 medium-4 cell">
                   <label>Student's Last Name</label>
-                  <input type="text" placeholder="Student's Last Name" />
+                  <input type="text" placeholder="Student's Last Name" name="StudentLastName" />
                 </div>
                 <div class="large-4 medium-4 cell">
                   <label>Student's Age</label>
-                  <input type="text" placeholder="Student's Age" />
+                  <input type="text" placeholder="Student's Age" name="StudentAge"/>
                 </div>
 
               </div>
@@ -180,7 +180,7 @@
                 <div class="grid-x grid-padding-x">
                   <div class="large-12 cell">
                     <label>Location</label>
-                    <select>
+                    <select name="Location">
                       <option value="e-brunswick">East Brunswick</option>
                       <option value="kendall">Kendall Park</option>
                       <option value="metuchen">Metuchen</option>
@@ -193,17 +193,17 @@
                   </div>
                 </div>
                 <div class="text-center">
-                  <input id="checkbox1" type="checkbox">
+                  <input id="checkbox1" type="checkbox" name="Monday">
                   <label for="checkbox1">Monday</label>
-                  <input id="checkbox2" type="checkbox">
+                  <input id="checkbox2" type="checkbox" name="Tuesday">
                   <label for="checkbox2">Tuesday</label>
-                  <input id="checkbox3" type="checkbox">
+                  <input id="checkbox3" type="checkbox" name="Wednesday">
                   <label for="checkbox3">Wednesday</label>
-                  <input id="checkbox4" type="checkbox">
+                  <input id="checkbox4" type="checkbox" name="Thursday">
                   <label for="checkbox4">Thursday</label>
-                  <input id="checkbox5" type="checkbox">
+                  <input id="checkbox5" type="checkbox" name="Friday">
                   <label for="checkbox5">Friday</label>
-                  <input id="checkbox6" type="checkbox">
+                  <input id="checkbox6" type="checkbox" name="Saturday">
                   <label for="checkbox6">Saturday</label>
                 </div>
                 <br>
@@ -211,15 +211,17 @@
                   <div class="large-12 cell">
                     <label>Please explain the student's current swimming ability including, do they put their face in the water?
                       Can they swim laps? Please include any details you think may be important.</label>
-                    <textarea placeholder="Please tell us about the student's current swim capability." rows="3"></textarea>
+                    <textarea placeholder="Please tell us about the student's current swim capability." rows="3" name="StudentInfo"></textarea>
                   </div>
                   <div class="large-12 cell">
                     <label>Do you have any special requests? i.e. instructor preference, time preference, etc.</label>
-                    <textarea placeholder="Do you have any special requests?" rows="3"></textarea>
+                    <textarea placeholder="Do you have any special requests?" rows="3" name="SpecialRequest"></textarea>
                   </div>
                 </div>
                 <a href="#" class="button">Submit</a>
               </div>
+              <input type="hidden" name="_next" value="https://puppity.github.io/JSJSwim/thanks.html">
+              <input type="hidden" name="_subject" value="Contact Form Submission">
             </form>
           </div>
         </div>
